@@ -7,11 +7,21 @@
     "test": "meteor test --driver-package meteortesting:mocha --settings settings.json",
     "lint": "eslint . --ext .jsx --fix"
   },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.jsx",
+      "server": "server/main.js"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*.js": "eslint --fix",
     "*.jsx": "eslint --fix"
   },
-  "pre-commit": "lint-staged",
   "dependencies": {
     "@babel/runtime": "^7.7.2",
     "Package": "0.0.1",
@@ -31,11 +41,7 @@
   },
   "devDependencies": {
     "eslint": "^6.6.0",
-    "eslint-import-resolver-meteor": "^0.4.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-meteor": "^6.0.0",
-    "eslint-plugin-react": "^7.16.0",
-    "lint-staged": "^9.4.2",
+    "lint-staged": "^10.1.7",
     "pre-commit": "^1.2.2"
   }
 }
