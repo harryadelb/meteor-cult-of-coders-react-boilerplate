@@ -4,7 +4,7 @@
   "scripts": {
     "start": "meteor npm i && meteor run",
     "debug": "meteor run --inspect",
-    "test": "meteor test --driver-package meteortesting:mocha --settings settings.json",
+    
     "lint": "eslint . --ext .jsx --fix"
   },
   "meteor": {
